@@ -2,14 +2,14 @@
     "user": {
         "fullName": "Nkosingiphile Mazibuko",
         "mattitle":" NKOSINGIPHILE PERSONAL WEPAGE USING MATERIALIZE FRAMEWORK",
-        "photo": "/images/Juliet.jpg",
+        "photo": "Juliet.png",
         "qalification":"BA honours in Public Management and Governace",
         "universityName": "University of Johannesburg",
         "interest": "Chess"
     },
     "city": {
         "name": "PARIS, FRANCE",
-        "photo": "images/Webp.net-resizeimage.jpg",
+        "photo": "Webp.net-resizeimage.png",
         "description": "Paris is such a beautiful city with unique paintings and attractive buildings. Apart from that, in Paris you can find the most famous museum called “Louvre” and the Pont des Arts bridge which symbolises “Love and commitment” to your loved ones. I also love that the city plays a massive role in the global economy and has various international frameworks to avoid climate change."
     },
     "foreignLanguage": {
