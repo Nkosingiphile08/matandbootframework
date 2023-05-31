@@ -1,7 +1,8 @@
 {
     "user": {
         "fullName": "Nkosingiphile Mazibuko",
-        "mattitle":" NKOSINGIPHILE PERSONAL WEPAGE USING MATERIALIZE FRAMEWORK",
+        "boottitle": "NKOSINGIPHILE'S WEBPAGE USING BOOTSTRAP FRAMEWORK",
+        "mattitle":" NKOSINGIPHILE'S WEBPAGE USING MATERIALIZE FRAMEWORK",
         "photo": "Juliet.png",
         "qalification":"BA honours in Public Management and Governace",
         "universityName": "University of Johannesburg",
@@ -50,9 +51,6 @@
     "pages":{
         "boostrapPages":"./index-bootstrap.html",
         "materializePages":"./index-materialize.html",
-        "homePage":"./index.html",
-        "logoPage":"images/uj_logo.jpg",
-        "announcement":"./announcement.index-bootstrap.html We are out of services during public holidays! ",
-        "contact":"./contact.index-materializePages.html 011 5559 423"
+        "homePage":"./index.html"
     }
 }

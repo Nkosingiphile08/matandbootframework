@@ -14,112 +14,124 @@
 <body>
   <style>
     body {
-      background-image: url("images/table_mountain.jpg");
+      background-image: url("table_mountain.png");
       background-repeat: no-repeat;
       background-size: cover;
       color: black;
     }
   </style>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active btn btn-primary" aria-current="page" href="{{pages.homePage}}">Home</a>
-          </li>
-          <li>
-            <a class="nav-link active" aria-current="page" href="{{pages.logoPage}}">logoPage</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{pages.aboutPage}}">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{pages.contactPage}}">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active material-icons right-left" aria-current="page"
-              href="{{pages.announcementPage}}">announcement</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <div class="container" style="background-color: aqua;">
-    <br>
-    <div class="row">
-      <div class="col-md-4">
-        <h1>{{user.fullName}}</h1>
-        <p>{{user.qalification}}<br>{{user.universityName}}<br>{{user.interest}}</p>
-      </div>
-      <div class="col-md-6"><img class="img" src={{user.photo}}></div>
-    </div>
-    <br>
-    
-    <div class="container">
-      <div class="row">
-        <h3>{{city.name}}</h3>
+  <main>
+    <div class="container" style="background-color: azure;">
 
-        <div class="col-sm-3 col-sm-3 col-sm-3">
-          <img class="img-fluid" src={{city.photo}}>
-         </div>
+      <div class="container text-center">
 
-        <div class="col-sm-3 col-sm-3 col-sm-3" style="border: 1px;">
-          <p>{{city.description}}</p>
-        </div>
-       
-        
-      </div>
-
-
-    </div>
-    <br>
-    <div class="container">
-      <div class="row">
-        <h2>Foreign Language</h2>
-      </div>
-      <div class="row">
-        <h4>{{foreignLanguage.language}}</h4>
-      </div>
-      <div class="col col-md-6">{{foreignLanguage.description}}</div>
-      <br>
-      <div class="container">
-        <div class="row">
-          <table class="table table-bordered text-black">
-            <tr>
-              <th>English</th>
-              <th>Foreign Language</th>
-            </tr>
-            {{#each foreignLanguage.phrases}}
-            <tr>
-              <td>{{englishPhrase}}</td>
-              <td>{{foreignLanguage}}</td>
-            </tr>
-            {{/each}}
-          </table>
-        </div>
-           <br>
-        <div class="container-fluid">
-          <div class="row">
-            <h4>Favourite Subjects</h4>
+        <section>
+          <div>
+            <p class="center-align">{{user.boottitle}}</p>
           </div>
-          <div class="row">
-            {{#each favouriteSubjects}}
-            <br>
-            <div class="col-sm">
-              <h5><strong>{{name}}</strong></h5>
-              <p class="lh-sm">{{description}}</p>
-              <img src={{photo}} class="img-fluid">
+      </div>
+      <br>
+      </section>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <div class="nav-wrapper">
+            <a href="index.html" class="btn btn-primary">HOME</a>
+            <a href="index-materialize.html" class="btn btn-primary">MATERIALIZE</a>
+            <a href="index-bootstrap.html" class="btn btn-primary">BOOTSTRAP</a>
+          </div>
+        </div>
+      </nav>
+      <hr>
+      <section>
+        <div class="row">
+          <div class="col-md-4">
+            <strong>
+              <p>{{user.fullName}}</p>
+            </strong>
+            <p>{{user.qalification}}</p>
+            <p>{{user.universityName}}</p>
+            <p>{{user.interest}}</p>
+          </div>
+          <br>
+          <div class="col-md-6">
+
+            <img class="img" src={{user.photo}} width="20%">
+          </div>
+          <hr>
+          <section>
+            <div class="row">
+              <div class="col-md-4">
+                <strong>
+                  <p>{{city.name}}</p>
+                </strong>
+                <strong>
+                  <p>CITY DESCRIPTION</p>
+                </strong>
+                <p class="col-sm">{{city.description}}</p>
+              </div>
+              <div class="col-md-6">
+
+                <img class="img" src={{city.photo}}>
+              </div>
+            </div>
+          </section>
+          <hr>
+          <section>
+            <div class="row">
+              <div class="col col-md-8">
+                <strong>
+                  <div>FOREIGN LANGUAGE</div>
+                  <p><br>{{foreignLanguage.language}}</p>
+                </strong>
+                <div>{{foreignLanguage.description}}</div><br>
+
+                <table class="table table-bordered text-black">
+                  <tr>
+                    <th>English Phrase</th>
+                    <th>Spanish Phrase</th>
+                  </tr>
+                  {{#each foreignLanguage.phrases}}
+                  <tr>
+                    <td>{{englishPhrase}}</td>
+                    <td>{{foreignLanguage}}</td>
+                  </tr>
+                  {{/each}}
+                </table>
+              </div>
+
+          </section>
+          <hr>
+          <section>
+            <div class="row p-6">
+              <strong>
+                <p class="btn btn-primary">FAVOURITE SUBJECTS</p>
+              </strong>
+              {{#each favouriteSubjects}}
+              <div class="col-sm-4">
+                <div>
+                  <strong>
+                    <p>{{name}}</p>
+                  </strong>
+                </div>
+                <div class="row p-6">
+                  <div class="col-sm-8">
+                    <p class="text-right">{{description}}</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <img src={{photo}} class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              {{/each}}
             </div>
 
-            {{/each}}
-          </div>
+          </section>
+          <hr>
+
         </div>
-      </div>
+    </div>
+  </main>
 
 </body>
 
