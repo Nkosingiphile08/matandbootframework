@@ -18,12 +18,19 @@
       background-repeat: no-repeat;
       background-size: cover;
       color: black;
+
+      .container {
+        border: 2px solid black;
+        margin: auto;
+        border-radius: 1em;
+        padding: 10px;
+      }
     }
   </style>
 
   <main>
     <div class="container" style="background-color: azure;">
-    
+
       <div class="container text-center">
 
         <section>
@@ -44,7 +51,8 @@
         </div>
       </nav>
       <hr>
-      <section>
+
+      <section class="text-center">
         <div class="row">
           <div class="col-md-4">
             <strong>
@@ -60,13 +68,14 @@
             <img class="img-fluid" src={{user.photo}}>
           </div>
           <hr>
+
           <section>
             <div class="row">
               <div class="col-md-8">
-              <strong>
-                <p>{{city.name}}</p>
-              </strong>
-            </div><br>
+                <strong>
+                  <p>{{city.name}}</p>
+                </strong>
+              </div><br>
               <div class="col-md-6">
 
                 <img class="img" src={{city.photo}}>
@@ -91,15 +100,17 @@
                 <div>{{foreignLanguage.description}}</div><br>
 
                 <table class="table table-bordered text-black">
-                  <tr>
-                    <th>English Phrase</th>
-                    <th>Spanish Phrase</th>
-                  </tr>
-                  {{#each foreignLanguage.phrases}}
-                  <tr>
-                    <td>{{englishPhrase}}</td>
-                    <td>{{foreignLanguage}}</td>
-                  </tr>
+                  <thread>
+                    <tr>
+                      <th scope="col">English Phrase</th>
+                      <th scope="col">Spanish Phrase</th>
+                    </tr>
+                    {{#each foreignLanguage.phrases}}
+                    <tr>
+                      <td>{{englishPhrase}}</td>
+                      <td>{{foreignLanguage}}</td>
+                    </tr>
+                  </thread>
                   {{/each}}
                 </table>
               </div>
